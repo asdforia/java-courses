@@ -11,12 +11,14 @@ public class CalculatorTest {
     @Test
     public void testSum() throws Exception {
         Calculator calculator = new Calculator();
-        assertEquals(12, calculator.sum(5, 7));
+        calculator.add(5, 7);
+        assertEquals(12, calculator.getResult());
     }
 
     @Test
     public void testDiff() throws Exception {
         Calculator calculator = new Calculator();
-        assertEquals(-2, calculator.diff(5, 7));
+        calculator.sub(5, 7);
+        assertEquals(-2, calculator.getResult());
     }
 }
