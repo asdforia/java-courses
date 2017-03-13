@@ -1,22 +1,37 @@
 package ru.javalessons.lesson;
 
 /**
- *
+ * this class is calculator
  */
 public class Calculator {
+    /**
+     * temporary result store
+     */
+    private int result;
 
     /**
-     * @param firstArg first argument
-     * @param secondArg second argument
-     * @return sum of first and second argument
+     * for addition of arguments
+     * @param params arguments for addition
      */
-    public int sum(int firstArg, int secondArg)
+    public void add (int ... params)
     {
-        return firstArg + secondArg;
+        for (int param : params) {
+            this.result += param;
+        }
     }
 
-    public int diff(int firstArg, int secondArg)
-    {
-        return firstArg - secondArg;
+    /**
+     * get result
+     * @return result of calculation
+     */
+    public int getResult(){
+        return this.result;
+    }
+
+    /**
+     * clean result
+     */
+    public void cleanResult(){
+        this.result = 0;
     }
 }
