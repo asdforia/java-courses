@@ -25,8 +25,9 @@ public class Calculator {
      * @param params args for subtraction
      */
     public void sub(int ... params){
-        for (int param : params) {
-            this.result -= param;
+        this.result = params[0];
+        for (int i = 1; i < params.length; i++) {
+            this.result -= params[i];
         }
     }
 
@@ -35,8 +36,9 @@ public class Calculator {
      * @param params args for multiplication
      */
     public void mul(int ... params){
-        for (int param : params) {
-            this.result *= param;
+        this.result = params[0];
+        for (int i = 1; i < params.length; i++) {
+            this.result *= params[i];
         }
     }
 
@@ -45,8 +47,9 @@ public class Calculator {
      * @param params args for division
      */
     public void div(int ... params){
-        for (int param : params) {
-            this.result /= param;
+        this.result = params[0];
+        for (int i = 1; i < params.length; i++) {
+            this.result /= params[i];
         }
     }
 
@@ -54,9 +57,10 @@ public class Calculator {
      * for Exponentiation
      * @param params args for Exponentiation
      */
-    public void exp(Integer ... params){
-        for (Integer param : params) {
-            this.result ^= param;
+    public void exp(int ... params){
+        this.result = params[0];
+        for (int i = 1; i < params.length; i++) {
+            this.result = (int) Math.pow(this.result, params[i]);
         }
     }
 

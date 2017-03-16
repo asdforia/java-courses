@@ -13,7 +13,7 @@ public class InteractRunner {
         String op;
         try {
             while (!exit.equals("yes")) {
-                System.out.println("Choose operation : + - * / ^");
+                System.out.println("Choose operation : + - x / ^");
                 op = reader.next();
                 System.out.println("Enter first argument: ");
                 String first = reader.next();
@@ -23,7 +23,7 @@ public class InteractRunner {
                     calc.add(Integer.valueOf(first), Integer.valueOf(second));
                 else if(op.equals("-"))
                     calc.sub(Integer.valueOf(first), Integer.valueOf(second));
-                else if(op.equals("*"))
+                else if(op.equals("x"))
                     calc.mul(Integer.valueOf(first), Integer.valueOf(second));
                 else if(op.equals("/"))
                     calc.div(Integer.valueOf(first), Integer.valueOf(second));
